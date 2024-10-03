@@ -83,7 +83,7 @@ CREATE TABLE `tblapplication` (
     `Faculty` varchar(200) NOT NULL,
     `ayr` varchar(200) NOT NULL,
     `gyr` varchar(200) NOT NULL,
-    `certificate` varchar(50) NOT NULL,
+    `certificate` varchar(255) NOT NULL,
     `Dateofapply` timestamp NOT NULL DEFAULT current_timestamp(),
     `Remark` varchar(200) NOT NULL,
     `Status` varchar(50) NOT NULL,
