@@ -62,9 +62,10 @@ if (strlen($_SESSION['OBCMSuid']) == 0) {
                 mkdir($uploadDir, 0755, true);
             }
 
-            // Move the file to the upload directory
-            $destination = $uploadDir . time() . '-' . basename($fileName);
-
+            // Create a new file name with a timestamp or some unique string
+            $destination = time() . '_' . substr($file_name, -10);  // Keep last 10 characters
+            // var_dump($destination);
+            // die;
             if (move_uploaded_file($fileTmpPath, $destination)) {
                 // echo 'File is successfully uploaded.';
 
